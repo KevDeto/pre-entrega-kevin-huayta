@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pre-Entrega</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">
+                <img src="image/logo.png" alt="logo">
+            </h1>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#reseñas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="inicio">
+            <h2 class="bienvenida">Bienvenido a Music Store</h2>
+            <p class="descripcion">
+                Somos la casa de música más completa de Argentina. Music Store es una casa de música líder en
+                instrumentos musicales y equipamiento de audio profesional. Disponemos de una amplia variedad de
+                productos en nuestro catálogo, desde instrumentos de orquesta y estudio, hasta guitarras, baterías,
+                pianos digitales, saxofones y ukeleles, además de equipos de grabación y microfonía líderes en el
+                mercado. Desde guitarras criollas para principiantes hasta micrófonos y amplificadores profesionales, la
+                tienda de instrumentos musicales online Music Store dispone de una amplia gama de equipamiento musical.
+            </p>
+        </section>
+        <section id="productos">
+            <div class="productos-header">
+                <h2 class="titulo-seccion-1">Productos</h2>
+            </div>
+            <div class="cards-container-1">
+                <div class="card">
+                    <figure>
+                        <img src="image/guitarra-1.png" alt="">
+                    </figure>
+                    <div class="card-descripcion">
+                        <h3>Guitarra Electrocriolla 1/2 caja Cordoba C5-cet Con Fishman</h3>
+                        <p class="precio">$345.999</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure>
+                        <img src="image/guitarra-2.png" alt="">
+                    </figure>
+                    <div class="card-descripcion">
+                        <h3>Guitarra Criolla Clasica Concierto Fishman Cordoba C5 Corte</h3>
+                        <p class="precio">$420.999</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <figure>
+                        <img src="image/guitarra-3.png" alt="">
+                    </figure>
+                    <div class="card-descripcion">
+                        <h3>Guitarra Electrica Yamaha RSS20 Vintage White Revstar</h3>
+                        <p class="precio">$699.299</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reseñas">
+            <div class="reseñas-header">
+                <h2 class="titulo-seccion-2">Reseñas</h2>
+            </div>
+            <div class="cards-container-2">
+                <div class="card">
+                    <div class="reseña-container" itemprop="reviewBody">
+                        <p>"Compré mi primera guitarra acústica aquí y el asesoramiento fue excepcional. ¡Hasta me
+                            dieron una lección básica gratis!"</p>
+                    </div>
+                    <div class="reseña-autor">
+                        <span itemprop="autor">Martín Gómez</span>
+                        <span class="reseña-rating">★★★★★</span>
+                        <meta itemprop="datePublished" content="2024-05-10">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="reseña-container" itemprop="reviewBody">
+                        <p>"La batería electrónica que pedí llegó antes de lo esperado y en perfecto estado. El soporte
+                            postventa resolvió mis dudas rápidamente."</p>
+                    </div>
+                    <div class="reseña-autor">
+                        <span itemprop="autor">Ana Torres</span>
+                        <span class="reseña-rating">★★★★☆</span>
+                        <meta itemprop="datePublished" content="2024-04-22">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="reseña-container" itemprop="reviewBody">
+                        <p>"Excelente relación calidad-precio en los teclados. Soy profesor de música y siempre
+                            recomiendo MusicShop a mis alumnos."</p>
+                    </div>
+                    <div class="reseña-autor">
+                        <span itemprop="autor">Carlos Méndez</span>
+                        <span class="reseña-rating">★★★★★</span>
+                        <meta itemprop="datePublished" content="2024-03-15">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <h2 class="titulo-seccion-3">Contacto</h2>
+            <form class="formulario-container" action="https://formspree.io/f/mwplygob" method="post">
+                <div class="nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="mensaje">
+                    <label for="text">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje"></textarea>
+                </div>
+                <div class="boton">
+                    <input type="submit" value="enviar">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h2 class="copyright">© 2025 Music Store. Todos los derechos reservados</h2>
+    </footer>
+</body>
+
+</html>
