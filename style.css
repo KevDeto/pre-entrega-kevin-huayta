@@ -9,6 +9,18 @@
     color: white;
 }
 
+/* header fijo y las cards quedan por debajo*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* margin para que la scroll frene antes de llegar y se vea bien*/
+section {
+    scroll-margin-top: 10rem;
+}
+
 /*HEADER*/
 .header-container {
     margin: 0 auto;
@@ -44,12 +56,13 @@
     text-decoration: none;
     cursor: pointer;
     text-transform: uppercase;
-    border-radius: 8px;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+    border-bottom: transparent;
+
 }
 
-.navbar ul li a:hover{
-    background-color: rgb(74, 0, 224,0.3);
+.navbar ul li a:hover {
+    border-bottom: 4px solid rgb(74, 0, 224, 0.3);
 }
 
 /*SECCION INICIO*/
@@ -76,15 +89,13 @@
 }
 
 /*SECCION PRODUCTOS*/
-#productos,
-#reseñas {
+#productos {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
 }
 
-.titulo-seccion-1,
-.titulo-seccion-2 {
+.titulo-seccion-1 {
     text-align: left;
     font-size: 28px;
     margin-bottom: 1rem;
@@ -92,20 +103,20 @@
     text-transform: uppercase;
 }
 
-.cards-container-1,
-.cards-container-2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+.cards-container-1 {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
 }
 
-#productos .card{
+#productos .card {
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     padding: 1rem;
     height: 400px;
     transition: transform 0.3s ease;
     cursor: pointer;
+    width: 350px;
 }
 
 #productos .card img {
@@ -133,7 +144,27 @@
 }
 
 /*RESEÑAS*/
-#reseñas .card{
+#reseñas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.titulo-seccion-2 {
+    text-align: left;
+    font-size: 28px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.cards-container-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+#reseñas .card {
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     padding: 1rem;
@@ -141,15 +172,19 @@
     transition: transform 0.3s ease;
     cursor: pointer;
 }
+
 #reseñas .card .reseña-autor,
-#reseñas .card .reseña-container{
+#reseñas .card .reseña-container {
     padding: 1rem 0 1rem 0;
 }
-#reseñas .card .reseña-autor{
+
+#reseñas .card .reseña-autor {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
 }
+
+
 
 /*CONTACTO*/
 #contacto {
@@ -174,6 +209,7 @@
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
 }
+
 .formulario-container div {
     margin-bottom: 1.5rem;
 }
@@ -187,7 +223,7 @@
 
 .formulario-container input[type="text"],
 .formulario-container input[type="email"],
-.formulario-container textarea{
+.formulario-container textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -219,12 +255,15 @@
 }
 
 /*FOOTER*/
-.copyright{
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
     max-width: 1200px;
     margin: 0 auto;
     padding: 32px 16px;
-    display: flex;
-    justify-content: center;
     font-size: 18px;
 }
 
@@ -235,32 +274,36 @@
     .header-container {
         padding: 1.5rem;
     }
-    
+
+    section {
+        scroll-margin-top: 9rem;
+    }
+
     .navbar ul {
         gap: 30px;
     }
-    
+
     .navbar ul li a {
         font-size: 18px;
         padding: 8px;
     }
-    
+
     .cards-container-1,
     .cards-container-2 {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px;
     }
-    
-    #productos .card{
-        height: auto;
-        min-height: 350px;
+
+    #productos .card {
+        width: 384px;
     }
 
-    
+
     #reseñas .card {
         min-height: auto;
         height: auto;
     }
+
 }
 
 /* celular grande 576px - 767px */
@@ -270,17 +313,21 @@
         padding: 1rem;
         gap: 1rem;
     }
-    
+
+    section {
+        scroll-margin-top: 12rem;
+    }
+
     .navbar ul {
         flex-wrap: wrap;
         gap: 15px;
         justify-content: center;
     }
-    
+
     .navbar ul li a {
         font-size: 16px;
     }
-    
+
     #inicio .bienvenida,
     #inicio .descripcion,
     .titulo-seccion-1,
@@ -290,17 +337,27 @@
         text-align: center;
         padding: 0.5rem;
     }
-    
-    .cards-container-1,
+
+    .cards-container-1 {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    #productos .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
     .cards-container-2 {
         grid-template-columns: 1fr;
         grid-gap: 20px;
     }
-    
+
     .formulario-container {
         padding: 1.5rem;
     }
-    
+
     #productos .card img {
         max-width: 200px;
     }
@@ -309,19 +366,23 @@
 
 /* celular 575px */
 @media (max-width: 575px) {
+    section {
+        scroll-margin-top: 12rem;
+    }
+
     .navbar ul {
         gap: 10px;
     }
-    
+
     .navbar ul li a {
         font-size: 14px;
         padding: 6px 8px;
     }
-    
+
     .logo img {
         width: 150px;
     }
-    
+
     #inicio .bienvenida,
     #inicio .descripcion,
     .titulo-seccion-1,
@@ -329,12 +390,16 @@
     .titulo-seccion-3 {
         font-size: 20px;
     }
-    
+
     .formulario-container {
         padding: 1rem;
     }
-    
+
     .formulario-container input[type="submit"] {
         width: 100%;
+    }
+
+    footer .copyright{
+        text-align: center;
     }
 }
