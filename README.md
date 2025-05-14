@@ -1,4 +1,4 @@
-Página web simple de una tienda de instrumentos musicales que incluye:
+Pre-entrega de una página web simple de una tienda de instrumentos musicales que incluye las siguientes practicas:
 
 + Estructura semántica básica (header, nav, main, footer)
 
